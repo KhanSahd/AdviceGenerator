@@ -10,11 +10,11 @@ const gettingQuote = async () => {
     const response = await fetch('https://api.adviceslip.com/advice');
     if (response){
         const jsonResponse = await response.json()
-        advice.innerHTML += jsonResponse.slip.id;
-        quote.innerHTML = `"${jsonResponse.slip.advice}"`;
+        advice.innerHTML += await jsonResponse.slip.id;
+        quote.innerHTML = await `"${jsonResponse.slip.advice}"`;
     }
 }
 
-button.onclick = gettingQuote;
+button.addEventListener('click', gettingQuote)
 
-window.onload = gettingQuote;
+window.addEventListener('load', gettingQuote)

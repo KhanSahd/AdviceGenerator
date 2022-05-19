@@ -39,6 +39,12 @@ body {
     bottom: -55px;
 }
 
+#icon:hover {
+    box-shadow: 0 0 50px hsl(150, 100%, 66%);
+    transition: all ease-in-out 400ms;
+    cursor: pointer;
+}
+
 #advice {
     color: hsl(150, 100%, 66%);
     font-weight: 500;
@@ -50,4 +56,28 @@ body {
     font-size: 28px;
     color: hsl(193, 38%, 86%);
     text-align: center;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px){
+
+    #container {
+        margin-top: 40%;
+    }
+
+    #card {
+        width: 95%;
+        padding: 5%;
+        position: relative;
+    }
+
+    #bar {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    #icon {
+        position: absolute;
+        bottom: -20px;
+    }
 }
